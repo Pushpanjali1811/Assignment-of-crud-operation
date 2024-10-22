@@ -1,14 +1,12 @@
-c
+
 CREATE DATABASE ProductDBTask;
 
-USE ProductDBTask;
+use ProductDBTask
 
 CREATE TABLE Products (
-    Id INT PRIMARY KEY IDENTITY,
-    Name NVARCHAR(100) NOT NULL,
-    Price DECIMAL(18, 2) NOT NULL,
-    Description NVARCHAR(255), 
-    DateAdded DATETIME NOT NULL DEFAULT GETDATE()
+    ProductId INT IDENTITY(1,1) PRIMARY KEY,
+    ProductName NVARCHAR(100),
+    Description NVARCHAR(255),
+    Price DECIMAL(18, 2),
+    CreatedDate DATETIME DEFAULT GETDATE()
 );
-
-
